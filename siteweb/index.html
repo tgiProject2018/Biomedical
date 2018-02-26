@@ -1,0 +1,47 @@
+<?php
+// Start the session
+session_start();
+//Objet session pour la langue du site
+if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Acceuil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	<!-- Custom CSS pour index -->
+	<link href="css/style-index.css" rel="stylesheet">
+  
+	
+	
+	
+	
+</head>
+<body>
+	<div>
+		<button class="btn" type="submit"><- Retour</button>
+	</div>
+	<div class="col-sm-4 text-left"> 
+		<h3>Information Biomedical</h3>
+	</div>
+	<div class="col-sm-8 text-left"> 
+		<div class="col-sm-2 text-left"> 
+			Prénom: <label id="lblPrenom" value="exemplePrenom">
+		</div>
+		<div class="col-sm-4 text-center"> 
+			Nom de famille: <label id="lblNomDeFamille" value="exempleFamille">
+		</div>
+		<div div class="col-sm-2 text-right"> 
+			Date de naissance: <label id="lblDateDeNaissance" value="01-09-1970">
+		</div>
+	</div>
+	<button class="btnBlue" type="submit">Information Générale</button>
+	<button class="btnRed" type="submit">Graphiques</button>
+	<button class="btnGreen" type="submit">Rapports</button>
+
+</body>

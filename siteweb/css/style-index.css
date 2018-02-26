@@ -1,0 +1,19 @@
+.btnBlue{
+	background-color: #547db0;
+	color: white;
+}
+
+.btnGreen{
+	background-color: #54b072;
+	color: white;
+}
+
+.btnRed{
+	background-color: #b05454;
+	color: white;
+}
+
+.btnWhite{
+	background-color: white;
+	color: #b05454;
+}
