@@ -45,6 +45,7 @@ if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
 	</div>
     
 	<div id = "infoClient">
+<<<<<<< HEAD
 		<div>
 			<button class="btn" type="submit"><- Retour</button>
 		</div>
@@ -54,14 +55,28 @@ if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
 		<div class="col-sm-8 text-left"> 
 			<div class="col-sm-2 text-left"> 
 				Prénom: <label id="lblPrenom" value="exemplePrenom">
+=======
+		<div class="col-sm-12 text-left">
+			<div>
+				<button class="btnWhite" type="submit">Retour</button>
+>>>>>>> e3abe9828db15b32a708f533cbe24e356987c99d
 			</div>
-			<div class="col-sm-4 text-center"> 
-				Nom de famille: <label id="lblNomDeFamille" value="exempleFamille">
+			<div class="col-sm-4 text-left"> 
+				<label class="lblTitre" >Information Biomedical</label>
 			</div>
-			<div div class="col-sm-2 text-right"> 
-				Date de naissance: <label id="lblDateDeNaissance" value="01-09-1970">
+			<div class="col-sm-8 text-left"> 
+				<div class="col-sm-4 text-left"> 
+					Prénom: <label id="lblPrenom" value="exemplePrenom">
+				</div>
+				<div class="col-sm-4 text-left"> 
+					Nom de famille: <label id="lblNomDeFamille" value="exempleFamille">
+				</div>
+				<div div class="col-sm-4 text-left"> 
+					Date de naissance: <label id="lblDateDeNaissance" value="01-09-1970">
+				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="col-sm-8 text-left">
 			<button class="btnBlue" type="submit">Information G&eacute;n&eacute;rale</button>
 			<button class="btnRed" type="submit">Graphiques</button>
@@ -71,4 +86,28 @@ if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
              
 
             <!--Conteneur de Tableau-->
+=======
+		<div class="line-seperator col-sm-12 text-left"></div>
+		<div class="col-sm-12 text-left">
+			<div class="col-sm-8 text-left">
+				<button class="btnBlue" type="submit">Information Générale</button>
+				<button class="btnWhite" type="submit">Graphiques</button>
+				<button class="btnWhite" type="submit">Rapports</button>
+			</div>
+			<div class="col-sm-4 text-right">
+				<button class="btnRed" type="submit">Modifier les informations</button>
+			</div>
+		<div>
+		<br>
+		<div id="listeClient">
+		</div>
+		<div class="container col-sm-12 text-left">
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>
+	
+>>>>>>> e3abe9828db15b32a708f533cbe24e356987c99d
 </body>

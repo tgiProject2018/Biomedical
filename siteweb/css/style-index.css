@@ -1,20 +1,24 @@
 .btnBlue{
 	background-color: #547db0;
 	color: white;
+	border-color: #ffffff00;
 }
 
 .btnGreen{
 	background-color: #54b072;
 	color: white;
+	border-color: #ffffff00;
 }
 
 .btnRed{
 	background-color: #b05454;
 	color: white;
+	border-color: #ffffff00;
 }
 
 .btnWhite{
 	background-color: white;
+<<<<<<< HEAD
 	color: #b05454;
 }
 .line-separator{
@@ -22,4 +26,26 @@
     height: 2px;
     border-left: 1px solid #313030;
     background: linear-gradient(to right, #797979 , white);
+=======
+	color: #547db0;
+	border-color: #ffffff00;
+}
+
+.btnRetour{
+	background-color: #ffffff00;
+	border-color: #ffffff00;
+}
+
+.lblTitre{
+	font-size: 150%;
+}
+
+.container{
+	height: 100%;
+	border-style: solid;
+	border-color: gray;
+	border-bottom-width: 1px;
+	margin-top: 30px;	
+	margin-bottom: 30px;
+>>>>>>> e3abe9828db15b32a708f533cbe24e356987c99d
 }
