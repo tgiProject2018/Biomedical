@@ -17,3 +17,9 @@
 	background-color: white;
 	color: #b05454;
 }
+.line-separator{
+    margin: 15px;
+    height: 2px;
+    border-left: 1px solid #313030;
+    background: linear-gradient(to right, #797979 , white);
+}

@@ -23,12 +23,33 @@ if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
 	
 </head>
 <body>
+ 
+    <div id="listeClient" class="col-sm-12 text-left">
+    <!--Header-->
+	   <div class="col-sm-4 text-left"> 
+           <h3>Liste Client</h3>
+       </div>
+        
+        <!--Ligne-->
+        <div class="col-sm-12 text-left line-separator"></div>
+        <!--Buttons-->
+        <div class="col-sm-12" style="padding-left: 0;">
+            <div class="col-sm-6 text-left">
+                <button class="btnBlue" type="submit">Information G&eacute;n&eacute;rale</button>
+			    <button class="btnRed" type="submit">Ins&eacute;rer</button>
+            </div>
+            <div class="col-sm-6 text-right">
+			     <button class="btnGreen" type="submit">Synchronisation</button>
+            </div>
+        </div>
+	</div>
+    
 	<div id = "infoClient">
 		<div>
 			<button class="btn" type="submit"><- Retour</button>
 		</div>
 		<div class="col-sm-4 text-left"> 
-			<h3>Information Biomedical</h3>
+			<h3>Information Biom&eacute;dical</h3>
 		</div>
 		<div class="col-sm-8 text-left"> 
 			<div class="col-sm-2 text-left"> 
@@ -42,12 +63,12 @@ if (!isset($_SESSION['language'])){$_SESSION['language'] = "FR";}?>
 			</div>
 		</div>
 		<div class="col-sm-8 text-left">
-			<button class="btnBlue" type="submit">Information Générale</button>
+			<button class="btnBlue" type="submit">Information G&eacute;n&eacute;rale</button>
 			<button class="btnRed" type="submit">Graphiques</button>
 			<button class="btnGreen" type="submit">Rapports</button>
-		<div>
-	</div>
-	<div id="listeClient">
-	
-	</div>
+	   </div>
+    </div>
+             
+
+            <!--Conteneur de Tableau-->
 </body>
