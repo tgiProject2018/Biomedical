@@ -1,5 +1,15 @@
 # Biomedical
 
+Important, faire les commandes :
+
+<code>
+cd nodejs
+npm install
+</code>
+
+Avant de faire quoi que ce soit.. impossible de tester sans faire cette commande.
+À chaque ajout de nouveau module, il faut refaire cette commande.
+
 TACHES WEB:<br>
 <ul>
 	<li>Mock-up</li>
