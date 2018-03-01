@@ -2,10 +2,10 @@
 
 Important, faire les commandes :
 
-<code>
-cd nodejs<br>
+<pre>
+cd nodejs
 npm install
-</code>
+</pre>
 
 Avant de faire quoi que ce soit.. impossible de tester sans faire cette commande.
 À chaque ajout de nouveau module, il faut refaire cette commande.
