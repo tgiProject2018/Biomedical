@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Acceuil</title>
+	<title>Accueil</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,69 +10,75 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 	<!-- Custom CSS pour index -->
-	<link href="css/style-index.css" rel="stylesheet">
-  
-	
-	
-	
-	
+	<link href="css/style-index.css" rel="stylesheet">	
 </head>
 <body>
- 
-    <div id="listeClient" class="col-sm-12 text-left">
-    <!--Header-->
-	   <div class="col-sm-4 text-left"> 
-           <h3>Liste Client</h3>
-       </div>
-        
-        <!--Ligne-->
-        <div class="col-sm-12 text-left line-separator"></div>
-        <!--Buttons-->
-        <div class="col-sm-12" style="padding-left: 0;">
-            <div class="col-sm-6 text-left">
-                <button class="btnBlue" type="submit">Information G&eacute;n&eacute;rale</button>
-			    <button class="btnRed" type="submit">Ins&eacute;rer</button>
-            </div>
-            <div class="col-sm-6 text-right">
-			     <button class="btnGreen" type="submit">Synchronisation</button>
-            </div>
-        </div>
-	</div>
-    <!--Enlever les <br>-->
-	<br><br><br>
+
+
+	<div id="body">
 	
-	<div id = "infoClient">
-		<div class="col-sm-12 text-left">
+		<div class="ensemble">
+		
+			<div id="listeClient" class="col-sm-12 text-left">
+			<!--Header-->
+			   <div class="col-sm-4 text-left"> 
+				   <h3>Liste Client</h3>
+			   </div>
+				
+				<!--Ligne-->
+				<div class="col-sm-12 text-left line-separator"></div>
+				<!--Buttons-->
+
+					<div class="col-sm-6 text-left">
+						<button class="btnBlue" type="submit">Information G&eacute;n&eacute;rale</button>
+						<button class="btnRed" type="submit">Ins&eacute;rer</button>
+					</div>
+					<div class="col-sm-6 text-right">
+						 <button class="btnGreen" type="submit">Synchronisation</button>
+					</div>
+			</div>
+			<!--Enlever les <br>-->
+			<br><br><br>
+			
+			<div id="infoClient">
+				<div class="col-sm-12 text-left">
+					<div>
+						<button class="btnWhite" type="submit">Retour</button>
+					</div>
+					<div class="col-sm-4 text-left"> 
+						<label class="lblTitre" >Information Biomedical</label>
+					</div>
+					<div class="col-sm-8 text-left"> 
+						<div class="col-sm-4 text-left"> 
+							Prénom: <label id="lblPrenom" value="exemplePrenom">
+						</div>
+						<div class="col-sm-4 text-left"> 
+							Nom de famille: <label id="lblNomDeFamille" value="exempleFamille">
+						</div>
+						<div div class="col-sm-4 text-left"> 
+							Date de naissance: <label id="lblDateDeNaissance" value="01-09-1970">
+						</div>
+						
+					</div>
+									<!--Ligne-->
+				<div class="col-sm-12 text-left line-separator"></div>
+				</div>
+				<div class="col-sm-8 text-left">
+					<button class="btnBlue" type="submit">Information Générale</button>
+					<button class="btnWhite" type="submit">Graphiques</button>
+					<button class="btnWhite" type="submit">Rapports</button>
+				</div>
+				<div class="col-sm-4 text-right">
+					<button class="btnRed" type="submit">Modifier les informations</button>
+				</div>
+			</div>
+		
+		
 			<div>
-				<button class="btnWhite" type="submit">Retour</button>
 			</div>
-			<div class="col-sm-4 text-left"> 
-				<label class="lblTitre" >Information Biomedical</label>
-			</div>
-			<div class="col-sm-8 text-left"> 
-				<div class="col-sm-4 text-left"> 
-					Prénom: <label id="lblPrenom" value="exemplePrenom">
-				</div>
-				<div class="col-sm-4 text-left"> 
-					Nom de famille: <label id="lblNomDeFamille" value="exempleFamille">
-				</div>
-				<div div class="col-sm-4 text-left"> 
-					Date de naissance: <label id="lblDateDeNaissance" value="01-09-1970">
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-8 text-left">
-			<button class="btnBlue" type="submit">Information Générale</button>
-			<button class="btnWhite" type="submit">Graphiques</button>
-			<button class="btnWhite" type="submit">Rapports</button>
-		</div>
-		<div class="col-sm-4 text-right">
-			<button class="btnRed" type="submit">Modifier les informations</button>
-		</div>
-    </div>
-	<div class="container">
-		<div class="col-sm-12">
-			<br>
 		</div>
 	</div>
+
+
+
 </body>
