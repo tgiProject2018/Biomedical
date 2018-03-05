@@ -12,8 +12,8 @@ Avant de faire quoi que ce soit.. impossible de tester sans faire cette commande
 
 TACHES WEB:<br>
 <ul>
-	<li>Mock-up</li>
-	<li>Serveur NODE.JS</li>
+	<li>Mock-up - Done - Francis</li>
+	<li>Serveur NODE.JS - Done - Francis</li>
 	<li>
 		Front/Back END
 		<ul>
