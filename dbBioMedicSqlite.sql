@@ -12,8 +12,8 @@ date numeric,
 systolique real,
 diasystolique real,
 poul real,
-idClient integer,-*9
-foreign key (idClient) references tbPatient(id));
+idPatient integer,-*9
+foreign key (idPatient) references tbPatient(id));
 INSERT INTO tbPriseTeste VALUES(1,1994,NULL,NULL,NULL,1);
 INSERT INTO tbPriseTeste VALUES(2,'2018-02-27',10.0,22.999999999999999999,44.0,1);
 INSERT INTO tbPriseTeste VALUES(3,1990,NULL,NULL,NULL,1);
