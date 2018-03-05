@@ -17,11 +17,18 @@
 	background-color: #547db0;
 	color: white;
 	border-color: #ffffff00;
+	padding: 5px 10px;
 }
 
 .btnGreen{
 	background-color: #54b072;
 	color: white;
+	border-color: #ffffff00;
+	padding: 5px 10px;
+}
+.btnGreen:hover{
+	background-color: white;
+	color: #547db0;
 	border-color: #ffffff00;
 }
 
@@ -29,13 +36,28 @@
 	background-color: #b05454;
 	color: white;
 	border-color: #ffffff00;
+	padding: 5px 10px;
+}
+.btnRed:hover{
+	background-color: white;
+	color: #547db0;
+	border-color: #ffffff00;
 }
 
 .btnWhite{
 	background-color: white;
 	color: #547db0;
+	border-color: #547db0;
+	border-width: 1px;
+	padding: 5px 10px;
+}
+.btnWhite:hover{
+	background-color: #547db0;
+	color: white;
 	border-color: #ffffff00;
 }
+
+
 .line-separator{
     margin-bottom: 15px;
     height: 1px;
