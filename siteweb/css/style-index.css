@@ -18,15 +18,14 @@
 
 .btnWhite{
 	background-color: white;
-<<<<<<< HEAD
-	color: #b05454;
+	color: #547db0;
+	border-color: #ffffff00;
 }
 .line-separator{
     margin: 15px;
     height: 2px;
     border-left: 1px solid #313030;
     background: linear-gradient(to right, #797979 , white);
-=======
 	color: #547db0;
 	border-color: #ffffff00;
 }
@@ -47,5 +46,6 @@
 	border-bottom-width: 1px;
 	margin-top: 30px;	
 	margin-bottom: 30px;
->>>>>>> e3abe9828db15b32a708f533cbe24e356987c99d
+	margin-left: 30px;
+	margin-right: 30px;
 }
