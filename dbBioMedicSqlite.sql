@@ -1,12 +1,12 @@
 PRAGMA foreign_keys=on;
 BEGIN TRANSACTION;
-CREATE TABLE tbPatient (
+CREATE TABLE tblpatient (
 id integer primary key autoincrement,
 prenom text,
 nom text,
 dateNaissance numeric);
-INSERT INTO tbPatient VALUES(1,'paul','tadi','1994-08-02');
-CREATE TABLE tbPriseTeste (
+INSERT INTO tblpatient VALUES(1,'paul','tadi','1994-08-02');
+CREATE TABLE tblpriseTeste (
 id integer primary key autoincrement,
 date numeric,
 systolique real,
