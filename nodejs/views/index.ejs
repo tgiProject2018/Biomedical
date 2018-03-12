@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title; %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
-  <body>
-    <h1><%= title; %></h1>
-    <p>Welcome to <%= title; %></p>
-  </body>
-</html>
+<html lang="en">
+<head>
+	<title>Accueil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	<!-- Custom CSS pour index -->
+	<link href="stylesheets/style.css" rel="stylesheet">	
+</head>
+<body>
+<div id="body">
+	<div class="ensemble">
+	
+		<div id="listeClient">
+      <!--Header-->
+      <div class="col-sm-12 text-left headerBio">
+        <div class="col-sm-4 text-left"> 
+          <label class="lblTitre" >Liste Client</label>
+        </div>
+        <br style="clear:both;">
+        <!--Ligne-->
+        <div class="col-sm-12 text-left line-separator"></div>
+      </div>
+
+			<!--Buttons-->
+			<div class="col-sm-6 text-left">
+				<button class="selected">Information G&eacute;n&eacute;rale</button>
+				<button class="red">Ins&eacute;rer</button>
+			</div>
+			<div class="col-sm-6 text-right">
+				<button class="green">Synchronisation</button>
+			</div>
+		</div>
+		
+		<div id="infoClient">
+			<div class="col-sm-12 text-left headerBio">
+				<div>
+					<a href="#">&lt;- Retour</a>
+				</div>
+				<div class="col-sm-2 text-left"> 
+					<label class="lblTitre" >Information Biomedical</label>
+				</div>
+				<div class="col-sm-10 text-left"> 
+					<div class="col-sm-4 text-left"> 
+						Prénom: <label id="lblPrenom">exemplePrenom</label>
+					</div>
+					<div class="col-sm-4 text-center"> 
+						Nom de famille: <label id="lblNomDeFamille">exempleFamille</label>
+					</div>
+					<div div class="col-sm-4 text-right"> 
+						Date de naissance: <label id="lblDateDeNaissance">01-09-1970</label>
+					</div>
+				</div>
+
+				<!--Ligne-->
+        <div class="col-sm-12 text-left line-separator"></div>
+      </div>
+      <div class="col-sm-8 text-left navMenu">
+        <button class="selected">Information Générale</button>
+        <button>Graphiques</button>
+        <button>Rapports</button>
+      </div>
+      <div class="col-sm-4 text-right">
+        <button class="red">Modifier les informations</button>
+      </div>
+		</div>
+	</div>
+</div>
+</body>

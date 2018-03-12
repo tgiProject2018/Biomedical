@@ -1,7 +1,73 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.ensemble{
+	position:absolute;
+	top: 60px;
+	bottom: 60px;
+	left: 60px;
+	right: 60px;
+  border: 1px solid #383844;
+  background: white; 
+	box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
+	-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
+	-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
 }
-a {
-  color: #00b7ff;
+		
+#body{
+	position:absolute;
+	width:100%;
+  height:100%;
+  background:url(/images/background_pattern.png) repeat;
 }
+
+button {
+  background-color: white;
+	color: #547db0;
+	border: 1px #547db0 solid;
+	padding: 5px 10px;
+}
+
+button.red {
+  background-color: #b05454;
+	color: white;
+	border: 1px #ffffff00 solid;
+}
+
+button.green {
+  background-color: #54b072;
+	color: white;
+	border: 1px #54b072 solid;
+}
+
+button:hover, button.selected{
+	background-color: #547db0;
+	color: white;
+	border: #547db0 1px solid;
+}
+
+.line-separator{
+    margin-bottom: 15px;
+    height: 1px;
+    background: linear-gradient(to right, #797979 , white);
+	  color: #547db0;
+	  border-color: #ffffff00;
+}
+
+.btnRetour{
+	background-color: #ffffff00;
+	border-color: #ffffff00;
+}
+
+.lblTitre{
+  font-weight: bold;
+  margin:0;
+  position: absolute;
+  left:0px;
+}
+
+.headerBio {
+  padding-top: 20px;
+}
+
+.headerBio a {
+  text-decoration: underline;
+}
+
