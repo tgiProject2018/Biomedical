@@ -18,7 +18,8 @@
 --
 -- Table structure for table `tbpatient`
 --
-
+CREATE DATABASE dbbiomedic;
+USE dbbiomedic;
 DROP TABLE IF EXISTS `tbpatient`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
