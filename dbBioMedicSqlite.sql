@@ -1,3 +1,4 @@
+.open dbbiomedic;
 PRAGMA foreign_keys=on;
 BEGIN TRANSACTION;
 CREATE TABLE tblpatient (
@@ -12,12 +13,12 @@ date numeric,
 systolique real,
 diasystolique real,
 poul real,
-idPatient integer,-*9
-foreign key (idPatient) references tbPatient(id));
-INSERT INTO tbPriseTeste VALUES(1,1994,NULL,NULL,NULL,1);
-INSERT INTO tbPriseTeste VALUES(2,'2018-02-27',10.0,22.999999999999999999,44.0,1);
-INSERT INTO tbPriseTeste VALUES(3,1990,NULL,NULL,NULL,1);
+idPatient integer,
+foreign key (idPatient) references tblPatient(id));
+INSERT INTO tblPriseTeste VALUES(1,1994,NULL,NULL,NULL,1);
+INSERT INTO tblPriseTeste VALUES(2,'2018-02-27',10.0,22.999999999999999999,44.0,1);
+INSERT INTO tblPriseTeste VALUES(3,1990,NULL,NULL,NULL,1);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('tbPatient',1);
-INSERT INTO sqlite_sequence VALUES('tbPriseTeste',1989);
+INSERT INTO sqlite_sequence VALUES('tblPatient',1);
+INSERT INTO sqlite_sequence VALUES('tblPriseTeste',1989);
 COMMIT;
