@@ -6,4 +6,3 @@ class GetResultat:
 		
 	def getResultat(self):
 		#sarah
-		return Resultat()
