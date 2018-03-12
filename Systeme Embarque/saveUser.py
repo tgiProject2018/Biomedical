@@ -1,5 +1,5 @@
 from shell import *
-class User :
+class User() :
 	nom = ""
 	prenom = ""
 	dateNaissance = ""
@@ -11,13 +11,14 @@ class User :
 		self.dateNaissance = "" 
 		self.resultat = Resultat()
 		
-	def createUser(self, nomV, prenomV, dateNaissanceV, resultatV):
-		self.nom = nomV
-		self.prenom = prenomV
-		self.dateNaissance = dateNaissanceV
-		self.resultat = resultatV
+	def createUser(self, nomArg, prenomArg, dateNaissanceArg, resultatArg):
+		self.nom = nomArg
+		self.prenom = prenomArg
+		self.dateNaissance = dateNaissanceArg
+		self.resultat = resultatArg
 	
 	def sendUser(self, ip):
+		# code DOMINICQUE
 		#SQL("") ip
 		print("send user")
 		print(self.resultat.pouls)

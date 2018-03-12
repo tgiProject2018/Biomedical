@@ -1,8 +1,8 @@
 from resultat import *
-class GetResultat:
+class GetResultat():
 
-	def __init__(self, ip):
-		
-		
 	def getResultat(self):
-		#sarah
+		#call la class resultat qui fake les resultat 
+		resultat = Resultat()
+		resultat.createResultat(71, 211, 160, "12-03-2018")
+		return resultat

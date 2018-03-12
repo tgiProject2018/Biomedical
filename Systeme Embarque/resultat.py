@@ -1,5 +1,5 @@
 from shell import *
-class Resultat:
+class Resultat():
 	
 	pouls = 0
 	systolique = 0
@@ -12,9 +12,9 @@ class Resultat:
 		self.diasystolique = 0 
 		self.datePrise = ""
 	
-	def createResultat(self, poulsV, systoliqueV, diasystoliqueV, datePriseV):
-		self.pouls = poulsV
-		self.systolique = systoliqueV
-		self.diasystolique = diasystoliqueV
-		self.datePrise = datePriseV
+	def createResultat(self, poulsArg, systoliqueArg, diasystoliqueArg, datePriseArg):
+		self.pouls = poulsArg
+		self.systolique = systoliqueArg
+		self.diasystolique = diasystoliqueArg
+		self.datePrise = datePriseArg
 	
