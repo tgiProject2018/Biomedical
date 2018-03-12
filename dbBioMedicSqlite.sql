@@ -1,13 +1,13 @@
 .open dbbiomedic;
 PRAGMA foreign_keys=on;
 BEGIN TRANSACTION;
-CREATE TABLE tblpatient (
+CREATE TABLE tblPatient (
 id integer primary key autoincrement,
 prenom text,
 nom text,
 dateNaissance numeric);
-INSERT INTO tblpatient VALUES(1,'paul','tadi','1994-08-02');
-CREATE TABLE tblpriseTeste (
+INSERT INTO tblPatient VALUES(1,'paul','tadi','1994-08-02');
+CREATE TABLE tblPriseTeste (
 id integer primary key autoincrement,
 date numeric,
 systolique real,
