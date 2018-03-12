@@ -18,6 +18,8 @@
 --
 -- Table structure for table `tbpatient`
 --
+
+DROP DATABASE IF EXISTS dbbiomedic;
 CREATE DATABASE dbbiomedic;
 USE dbbiomedic;
 DROP TABLE IF EXISTS `tbpatient`;
@@ -39,7 +41,7 @@ CREATE TABLE `tbpatient` (
 
 LOCK TABLES `tbpatient` WRITE;
 /*!40000 ALTER TABLE `tbpatient` DISABLE KEYS */;
-INSERT INTO `tbpatient` VALUES (1,'paul','tadi','1994-08-02');
+INSERT INTO `tbpatient` VALUES (1,'paul','tadi','1994-08-02', '420 rue Bob');
 /*!40000 ALTER TABLE `tbpatient` ENABLE KEYS */;
 UNLOCK TABLES;
 
