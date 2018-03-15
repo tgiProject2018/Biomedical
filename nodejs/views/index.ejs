@@ -7,10 +7,22 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+    <!--Datatable JS-->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 	<!-- Custom CSS pour index -->
-	<link href="stylesheets/style.css" rel="stylesheet">	
+	<link href="stylesheets/style.css" rel="stylesheet">
+    <!--Datatable CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+
 </head>
+    
+    <script>
+        $(document).ready( function () {
+            $('#table_Clients').DataTable();
+            $('#table_Client').DataTable();
+        } );
+    </script>
 <body>
 <div id="body">
 	<div class="ensemble">
@@ -34,6 +46,29 @@
 			<div class="col-sm-6 text-right">
 				<button class="green">Synchronisation</button>
 			</div>
+            
+            
+            <!--contenue selon selection-->
+            <div id="contenuListeClients">
+                <table id="table_Clients" class="display">
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</div>
 		
 		<div id="infoClient">
@@ -67,7 +102,32 @@
       <div class="col-sm-4 text-right">
         <button class="red">Modifier les informations</button>
       </div>
+            
+                        <!--contenue selon selection-->
+            <div id="contenuInfoClient">
+                <table id="table_Client" class="display">
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
 		</div>
+        
+        
 	</div>
 </div>
 </body>
