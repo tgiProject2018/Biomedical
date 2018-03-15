@@ -71,3 +71,14 @@ button:hover, button.selected{
   text-decoration: underline;
 }
 
+#contenuListeClients{
+	margin-top: 15px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+}
+
+#contenuInfoClient{
+	margin-top: 15px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+}

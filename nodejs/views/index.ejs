@@ -26,18 +26,16 @@
 <body>
 <div id="body">
 	<div class="ensemble">
-	
-		<div id="listeClient">
-      <!--Header-->
-      <div class="col-sm-12 text-left headerBio">
-        <div class="col-sm-4 text-left"> 
-          <label class="lblTitre" >Liste Client</label>
+	    <div id="listeClient">
+        <!--Header-->
+        <div class="col-sm-12 text-left headerBio">
+            <div class="col-sm-4 text-left"> 
+            <label class="lblTitre" >Liste Client</label>
+            </div>
+            <br style="clear:both;">
+            <!--Ligne-->
+            <div class="col-sm-12 text-left line-separator"></div>
         </div>
-        <br style="clear:both;">
-        <!--Ligne-->
-        <div class="col-sm-12 text-left line-separator"></div>
-      </div>
-
 			<!--Buttons-->
 			<div class="col-sm-6 text-left">
 				<button class="selected">Information G&eacute;n&eacute;rale</button>
@@ -47,28 +45,35 @@
 				<button class="green">Synchronisation</button>
 			</div>
             
-            
-            <!--contenue selon selection-->
-            <div id="contenuListeClients">
-                <table id="table_Clients" class="display">
-                    <thead>
-                        <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Row 1 Data 1</td>
-                            <td>Row 1 Data 2</td>
-                        </tr>
-                        <tr>
-                            <td>Row 2 Data 1</td>
-                            <td>Row 2 Data 2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="col-sm-12">
+                <!--contenue selon selection-->
+                <div id="contenuListeClients">
+                    <table id="table_Clients" class="display">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>Date de naissance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Lefevre</td>
+                                <td>Bob</td>
+                                <td>1960-05-31</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
 		</div>
 		
 		<div id="infoClient">
@@ -91,40 +96,46 @@
 					</div>
 				</div>
 
-				<!--Ligne-->
-        <div class="col-sm-12 text-left line-separator"></div>
-      </div>
-      <div class="col-sm-8 text-left navMenu">
-        <button class="selected">Information Générale</button>
-        <button>Graphiques</button>
-        <button>Rapports</button>
-      </div>
-      <div class="col-sm-4 text-right">
-        <button class="red">Modifier les informations</button>
-      </div>
-            
-                        <!--contenue selon selection-->
-            <div id="contenuInfoClient">
-                <table id="table_Client" class="display">
-                    <thead>
-                        <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Row 1 Data 1</td>
-                            <td>Row 1 Data 2</td>
-                        </tr>
-                        <tr>
-                            <td>Row 2 Data 1</td>
-                            <td>Row 2 Data 2</td>
-                        </tr>
-                    </tbody>
-                </table>
+			<!--Ligne-->
+                <div class="col-sm-12 text-left line-separator"></div>
             </div>
-            
+            <div class="col-sm-8 text-left navMenu">
+                <button class="selected">Information Générale</button>
+                <button>Graphiques</button>
+                <button>Rapports</button>
+            </div>
+            <div class="col-sm-4 text-right">
+                <button class="red">Modifier les informations</button>
+            </div>
+            <div class="col-sm-12">
+                <!--contenue selon selection-->
+                <div id="contenuInfoClient" >
+                    <table id="table_Client" class="display">
+                        <thead>
+                            <tr>
+                                <th>Date de prise du test</th>
+                                <th>Pression Systolique</th>
+                                <th>Pression Diasystolique</th>
+                                <th>Pouls Cardiaque</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1970-01-01</td>
+                                <td>200</td>
+                                <td>200</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>2018-03-15</td>
+                                <td>200</td>
+                                <td>200</td>
+                                <td>200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 		</div>
         
         
