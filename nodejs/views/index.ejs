@@ -5,49 +5,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--Datatable JS-->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-	<!-- Custom CSS pour index -->
-	<link href="stylesheets/style.css" rel="stylesheet">
-    <!--Datatable CSS-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
 </head>
-    
-    <script>
-        $(document).ready( function () {
-            $('#table_Clients').DataTable();
-            $('#table_Client').DataTable();
-        } );
-    </script>
 <body>
 <div id="body">
 	<div class="ensemble">
 	    <div id="listeClient">
-        <!--Header-->
-        <div class="col-sm-12 text-left headerBio">
-            <div class="col-sm-4 text-left"> 
-            <label class="lblTitre" >Liste Client</label>
+            <!--Header-->
+            <div class="col-sm-12 text-left headerBio">
+                <div class="col-sm-4 text-left"> 
+                <label class="lblTitre" >Liste Client</label>
+                </div>
+                <br style="clear:both;">
+                <!--Ligne-->
+                <div class="col-sm-12 text-left line-separator"></div>
             </div>
-            <br style="clear:both;">
-            <!--Ligne-->
-            <div class="col-sm-12 text-left line-separator"></div>
-        </div>
 			<!--Buttons-->
 			<div class="col-sm-6 text-left">
 				<button class="selected">Information G&eacute;n&eacute;rale</button>
-				<button class="red">Ins&eacute;rer</button>
+                <button class="red">Ins&eacute;rer</button>
+                <input type="text" class="searchbox" placeholder="Recherche">
 			</div>
 			<div class="col-sm-6 text-right">
 				<button class="green">Synchronisation</button>
-			</div>
+            </div>
             
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="position: absolute; top: 90px; left: 0px; bottom: 30px;">
                 <!--contenue selon selection-->
-                <div id="contenuListeClients">
+                <div id="contenuListeClients" style="width: 100%;height: 100%;">
                     <table id="table_Clients" class="display">
                         <thead>
                             <tr>
@@ -63,6 +49,108 @@
                                 <td>Lefevre</td>
                                 <td>Bob</td>
                                 <td>1960-05-31</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lebrun</td>
+                                <td>Jamie</td>
+                                <td>1983-09-11</td>
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -141,4 +229,15 @@
         
 	</div>
 </div>
+<div id="mask"></div>
+<div id="modal">
+    <div id="login" class="modalCustom">
+        <a href="#" onclick="login()">test login</a>
+    </div>
+</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+<script src="/javascripts/app.js"></script>
+</html>
