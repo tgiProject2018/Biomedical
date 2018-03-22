@@ -233,7 +233,18 @@
 <div id="mask"></div>
 <div id="modal">
     <div id="login" class="modalCustom">
-        <a href="#" onclick="login()">test login</a>
+        <label class="lblConnextion" >Connexion</label>
+        <from>
+            <input type="text" id="nomDUtilisateur" placeholder="Nom d'utilisateur">
+            <input type="text" id="motDePasse" placeholder="Mot de passe">
+            
+            <button class="green" onclick="login()">Connexion</button>
+        </from>
+        <p>
+                L’accès à cette page est strictement reservé au personnel de cette entreprise.
+                Si vous n'êtes pas un employé(e), veuillez quitter cette page à l'instant.
+        </p>
+
     </div>
 </div>
 </body>
