@@ -15,7 +15,7 @@
             <!--Header-->
             <div class="col-sm-12 text-left headerBio">
                 <div class="col-sm-4 text-left"> 
-                <label class="lblTitre" >Liste Client</label>
+                <span class="lblTitre" >Liste Client</span>
                 </div>
                 <br style="clear:both;">
                 <!--Ligne-->
@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr data-id="bitch">
                                 <td>1</td>
                                 <td>Lefevre</td>
                                 <td>Bob</td>
@@ -170,17 +170,17 @@
 					<a href="#">&lt;- Retour</a>
 				</div>
 				<div class="col-sm-2 text-left"> 
-					<label class="lblTitre" >Information Biomedical</label>
-				</div>
+					<span class="lblTitre" >Information Biomedical</span>
+                </div>
 				<div class="col-sm-10 text-left"> 
 					<div class="col-sm-4 text-left"> 
-						Prénom: <label id="lblPrenom">exemplePrenom</label>
+						Prénom: <span id="lblPrenom">exemplePrenom</span>
 					</div>
 					<div class="col-sm-4 text-center"> 
-						Nom de famille: <label id="lblNomDeFamille">exempleFamille</label>
+						Nom de famille: <span id="lblNomDeFamille">exempleFamille</span>
 					</div>
 					<div div class="col-sm-4 text-right"> 
-						Date de naissance: <label id="lblDateDeNaissance">01-09-1970</label>
+						Date de naissance: <span id="lblDateDeNaissance">01-09-1970</span>
 					</div>
 				</div>
 
@@ -238,7 +238,7 @@
             <input type="text" id="nomDUtilisateur" placeholder="Nom d'utilisateur">
             <input type="text" id="motDePasse" placeholder="Mot de passe">
             
-            <button class="green" onclick="login()">Connexion</button>
+            <button class="green connexionBtn">Connexion</button>
         </from>
         <p>
                 L’accès à cette page est strictement reservé au personnel de cette entreprise.

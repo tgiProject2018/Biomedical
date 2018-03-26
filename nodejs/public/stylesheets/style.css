@@ -14,6 +14,19 @@
 
 .ensemble > div {
 	display: none;
+	position:absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: white;
+}
+
+#listeClient {
+	z-index: 2;
+}
+#infoClient {
+	top:-20px;
 }
 
 .dataTables_filter {
@@ -126,6 +139,8 @@ button:hover, button.selected{
 	padding: 5px;
 	border: 1px solid #cccccc;
 }
+
+#lblPrenom, #lblNomDeFamille, #lblDateDeNaissance {font-weight: bold;}
 
 /*Datatable css fix*/
 #table_Clients_wrapper {
