@@ -14,7 +14,21 @@
 
 .ensemble > div {
 	display: none;
+	position:absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: white;
 }
+
+#listeClient {
+	z-index: 2;
+}
+#infoClient {
+	top:-20px;
+}
+
 
 .dataTables_filter {
 	display: none;
