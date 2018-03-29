@@ -8,7 +8,25 @@ $(document).ready(function(){
     $(".connexionBtn").on('click', function() {
         login();
     });
+
+    $(".creerUtilisateurBtn").on('click', function() {
+        inserer();
+    });
+
+    $(".insertBtn").on('click', function() {
+        showInsertModal();
+    });
 });
+
+function showInsertModal(){
+    $('#listeClient').fadeOut();
+    $('#insersion').fadeIn();
+}
+
+function inserer(){
+    $('#insersion').fadeOut();
+    $('#listeClient').fadeIn();
+}
 
 function login () {
     $('#mask').fadeOut();
