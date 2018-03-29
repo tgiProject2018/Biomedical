@@ -14,19 +14,6 @@
 
 .ensemble > div {
 	display: none;
-	position:absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background: white;
-}
-
-#listeClient {
-	z-index: 2;
-}
-#infoClient {
-	top:-20px;
 }
 
 .dataTables_filter {
@@ -35,6 +22,34 @@
 
 .searchbox {
 	height: 32px;
+}
+
+.containerlogin{
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0px;
+}
+
+.containerloginBouttonLeft{
+	padding-right: 5px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.containerloginBouttonRight{
+	padding-right: 0px;
+	padding-left: 5px;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.modalInput{
+	width: 100%;
+}
+
+.modalbutton{
+	width: 100%;
 }
 		
 #body{
@@ -56,23 +71,23 @@
 
 .modalCustom {
 	z-index: 3000;
-}
-
-#login {
-  position: absolute;
-	width: 600px;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  margin: -200px 0 0 -275px;
-	background: white;
-	padding: 30px;
 
 	border: 1px solid #383844;
 	box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
 	-webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
 	-moz-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7)  ; 
 	overflow-y: auto;
+}
+
+#login {
+  position: absolute;
+	width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -275px;
+	background: white;
+	padding: 30px;
 }
 
 button {
@@ -139,8 +154,6 @@ button:hover, button.selected{
 	padding: 5px;
 	border: 1px solid #cccccc;
 }
-
-#lblPrenom, #lblNomDeFamille, #lblDateDeNaissance {font-weight: bold;}
 
 /*Datatable css fix*/
 #table_Clients_wrapper {
