@@ -20,6 +20,18 @@ $(document).ready(function(){
     $(".annulerInsererBtn").on('click', function() {
         hideInsertModal();
     });
+
+    $(".modifierUtilisateurBtn").on('click', function() {
+        modifier();
+    });
+
+    $(".mofidierBtn").on('click', function() {
+        showMofifierModal();
+    });
+    
+    $(".annulerModifierBtn").on('click', function() {
+        hideModifierModal();
+    });
     
 });
 
@@ -36,6 +48,21 @@ function inserer(){
     $('#insertion').fadeOut();
     $('#listeClient').fadeIn();
     //Inserer dans la bdd.
+}
+
+function showMofifierModal(){
+    $('#mask').fadeIn();
+    $('#modifier').fadeIn();
+}
+function hideModifierModal(){
+    $('#mask').fadeOut();
+    $('#modifier').fadeOut();
+}
+function modifier(){
+    $('#mask').fadeOut();
+    $('#modifier').fadeOut();
+    $('#infoClient').fadeIn();
+    //Inserer la modification dans la bdd.
 }
 
 function login () {
