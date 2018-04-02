@@ -104,6 +104,28 @@
 	padding: 30px;
 }
 
+#insertion {
+  position: absolute;
+	width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -275px;
+	background: white;
+	padding: 30px;
+}
+
+#modifier {
+  position: absolute;
+	width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -275px;
+	background: white;
+	padding: 30px;
+}
+
 button {
   background-color: white;
 	color: #547db0;
