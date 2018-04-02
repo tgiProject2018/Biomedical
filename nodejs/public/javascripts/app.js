@@ -1,9 +1,10 @@
 var oTable;
 var userTable;
-
+var page = 0;
 $(document).ready(function(){
     $(".headerBio a").on('click', function() {
         $('#listeClient').fadeIn();
+        page = 1;
     });
 
     $(".connexionBtn").on('click', function() {
@@ -34,6 +35,10 @@ $(document).ready(function(){
         hideModifierModal();
     });
     
+    window.onresize = function(){
+        if(page==1) oTable.draw();
+        else if (page == 2) userTable.draw();
+    }
 });
 
 function showInsertModal(){
@@ -84,7 +89,9 @@ function login () {
         "pageLength": 17,
         "scrollY": "630px",
     }); 
-
+    
+    page = 1;
+    
     $(".searchbox").on("keyup search input paste cut", function() {
         oTable.search(this.value).draw();
     }); 
@@ -97,5 +104,8 @@ function login () {
             "pageLength": 17,
             "scrollY": "630px",
         });
+        
+        page = 2;
+        
     } );
 }
