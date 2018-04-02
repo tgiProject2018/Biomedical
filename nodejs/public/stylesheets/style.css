@@ -209,3 +209,15 @@ button:hover, button.selected{
 #table_Clients_info {
 	position: absolute;bottom: 11px;
 }
+
+#table_infoClient_wrapper {
+	height: 100%;
+}
+
+#table_infoClient_paginate {
+	position: absolute;bottom: 5px;right: 5px;
+}
+
+#table_infoClient_info {
+	position: absolute;bottom: 11px;
+}

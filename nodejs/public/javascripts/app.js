@@ -1,4 +1,5 @@
 var oTable;
+var userTable;
 
 $(document).ready(function(){
     $(".headerBio a").on('click', function() {
@@ -89,6 +90,11 @@ function login () {
     }); 
 
     $('#table_Clients tbody').on('click', 'tr', function () {
+        userTable = $('#table_infoClient').DataTable({
+            "lengthChange": false,
+            "pageLength": 17,
+            "scrollY": "630px",
+        });
         $("#infoClient").show();
         $("#listeClient").fadeOut("slow");
     } );
