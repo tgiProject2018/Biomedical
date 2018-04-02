@@ -90,12 +90,12 @@ function login () {
     }); 
 
     $('#table_Clients tbody').on('click', 'tr', function () {
+        $("#infoClient").show();
+        $("#listeClient").fadeOut("slow");
         userTable = $('#table_infoClient').DataTable({
             "lengthChange": false,
             "pageLength": 17,
             "scrollY": "630px",
         });
-        $("#infoClient").show();
-        $("#listeClient").fadeOut("slow");
     } );
 }

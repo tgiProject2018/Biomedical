@@ -221,3 +221,12 @@ button:hover, button.selected{
 #table_infoClient_info {
 	position: absolute;bottom: 11px;
 }
+.tablefix, .tablefixInfo {
+	position: absolute; top: 90px; left: 0px; bottom: 30px;
+}
+.tablefixInfo {
+	top:110px;
+}
+.tablefix > div, .tablefixInfo > div {
+	width: 100%;height: 100%;
+}
