@@ -35,15 +35,7 @@ function inserer(){
     $('#mask').fadeOut();
     $('#insertion').fadeOut();
     $('#listeClient').fadeIn();
-    //Inserer dans la datatable.
-    var lastID = oTable.rows().count();
-    oTable.row.add(
-        [
-         lastID,$("#nomClient").val(),
-         $("#prenomClient").val(),
-         $("#dateDeNaissance").val()
-        ]);
-    oTable.draw();
+    //Inserer dans la bdd.
 }
 
 function login () {
