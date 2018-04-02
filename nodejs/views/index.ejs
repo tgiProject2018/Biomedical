@@ -192,7 +192,7 @@
                 <button>Rapports</button>
             </div>
             <div class="col-sm-4 text-right">
-                <button class="red">Modifier les informations</button>
+                <button class="red mofidierBtn">Modifier les informations</button>
             </div>
             <div class="col-sm-12">
                 <!--contenue selon selection-->
@@ -266,6 +266,24 @@
         </div>
         <div class="containerloginBouttonRight col-sm-6 text-left">
             <button class="red annulerInsererBtn modalbutton">Annuler</button>
+        </div>
+    </div>
+    <div id="modifier" class="modalCustom" style="display:none;">
+        <label class="lblConnextion" >Modifier client</label>
+        <div class="containerlogin col-sm-12 text-left">
+            <input class="modalInput" type="text" id="modifierNomClient" placeholder="Nom du client">
+        </div>
+        <div class="containerlogin col-sm-12 text-left">
+            <input class="modalInput" type="text" id="modifierPrenomClient" placeholder="Prénom du client">
+        </div>
+        <div class="containerlogin col-sm-12 text-left">
+            Date de naissance: <input type="date" id="modifierDateDeNaissance" value="2018-03-29">
+        </div>
+        <div class="containerloginBouttonLeft col-sm-6 text-left">
+            <button class="green modalbutton modifierUtilisateurBtn">Modifier client</button>
+        </div>
+        <div class="containerloginBouttonRight col-sm-6 text-left">
+            <button class="red annulerModifierBtn modalbutton">Annuler</button>
         </div>
     </div>
 </div>
