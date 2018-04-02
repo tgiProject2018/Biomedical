@@ -16,16 +16,26 @@ $(document).ready(function(){
     $(".insertBtn").on('click', function() {
         showInsertModal();
     });
+    
+    $(".annulerInsererBtn").on('click', function() {
+        hideInsertModal();
+    });
+    
 });
 
 function showInsertModal(){
-    $('#listeClient').fadeOut();
-    $('#insersion').fadeIn();
+    $('#mask').fadeIn();
+    $('#insertion').fadeIn();
 }
-
+function hideInsertModal(){
+    $('#mask').fadeOut();
+    $('#insertion').fadeOut();
+}
 function inserer(){
-    $('#insersion').fadeOut();
+    $('#mask').fadeOut();
+    $('#insertion').fadeOut();
     $('#listeClient').fadeIn();
+    //Inserer dans la bdd.
 }
 
 function login () {
