@@ -76,7 +76,14 @@ function modifier(){
     $('#mask').fadeOut();
     $('#modifier').fadeOut();
     $('#infoClient').fadeIn();
+
+    //Inserer la modification dans la page
+    $('#lblPrenom').html($('#modifierPrenomClient').val());
+    $('#lblNomDeFamille').html($('#modifierNomClient').val());
+    $('#lblDateDeNaissance').html($('#modifierDateDeNaissance').val());
+
     //Inserer la modification dans la bdd.
+    
 }
 
 function login () {
