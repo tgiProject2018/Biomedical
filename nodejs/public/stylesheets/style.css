@@ -28,6 +28,12 @@
 #infoClient {
 	top:-20px;
 }
+#graphiqueClient{
+    display:none;
+}
+#rapportClient{
+    display:none;
+}
 
 
 .dataTables_filter {

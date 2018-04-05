@@ -100,6 +100,7 @@ function login () {
         $("#infoClient").show();
         $("#listeClient").fadeOut("slow");
         userTable = $('#table_infoClient').DataTable({
+            "retrieve":true,                                        
             "lengthChange": false,
             "pageLength": 17,
             "scrollY": "630px",
