@@ -1,5 +1,5 @@
 #from saveUser import *
-import sqlite
+import sqlite3
 class PatientDao() :
 	#Chemin de la base de donne local
 	#A modifier
@@ -32,4 +32,4 @@ class PatientDao() :
 			cur.execute("INSERT INTO tbPrisePatient(date,systolique,diasystolique,poul,idClient) values (datetime('now'),%f,%f,%f,%f,%d)" , user.systolique,user.diasystolique,user.poul,id)
 		cur.close()
 		conn.commit()
-conn.close()
+		conn.close()
