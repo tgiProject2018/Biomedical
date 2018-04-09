@@ -35,6 +35,39 @@ $(document).ready(function(){
         hideModifierModal();
     });
     
+    $(".infoTable").on('click', function() {
+        //Slideup l'autre contenu
+        $("#graphiqueClient").slideUp();
+        $("#rapportClient").slideUp();
+        $("#table_infoClient_wrapper").slideDown();
+        //changer a selected
+        $(".graphique").removeClass("selected");
+        $(".infoTable").addClass("selected");
+        $(".rapport").removeClass("selected");
+    });
+    $(".graphique").on('click', function() {
+        //Slideup l'autre contenu
+        $("#table_infoClient_wrapper").slideUp();
+        $("#rapportClient").slideUp();
+        $("#graphiqueClient").slideDown();
+        //changer a selected
+        $(".graphique").addClass("selected");
+        $(".infoTable").removeClass("selected");
+        $(".rapport").removeClass("selected");
+    });
+    $(".rapport").on('click', function() {
+        //Slideup l'autre contenu
+        $("#table_infoClient_wrapper").slideUp();
+        $("#graphiqueClient").slideUp();
+        $("#rapportClient").slideDown();
+        
+        //changer a selected
+        $(".graphique").removeClass("selected");
+        $(".infoTable").removeClass("selected");
+        $(".rapport").addClass("selected");
+        
+
+    });
     window.onresize = function(){
         if(page==1) oTable.draw();
         else if (page == 2) userTable.draw();
@@ -57,7 +90,7 @@ function inserer(){
     var lastID = oTable.rows().count(); 
     oTable.row.add( 
         [ 
-         lastID,$("#nomClient").val(), 
+         lastID+1,$("#nomClient").val(), 
          $("#prenomClient").val(), 
          $("#dateDeNaissance").val() 
         ]); 
@@ -72,6 +105,7 @@ function hideModifierModal(){
     $('#mask').fadeOut();
     $('#modifier').fadeOut();
 }
+
 function modifier(){
     $('#mask').fadeOut();
     $('#modifier').fadeOut();
@@ -85,7 +119,6 @@ function modifier(){
     //Inserer la modification dans la bdd.
     
 }
-
 function login () {
     $('#mask').fadeOut();
     $('#login').fadeOut();
