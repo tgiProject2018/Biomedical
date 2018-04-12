@@ -12,6 +12,10 @@ $(document).ready(function(){
         login();
     });
 
+    $(".sortirBtn").on('click', function() {
+        sortir();
+    });
+
     $(".creerUtilisateurBtn").on('click', function() {
         inserer();
     });
@@ -155,6 +159,10 @@ function login () {
         $('#graphiqueClient').html("<div id=\"kagiChart\"></div>");
         Graph();
     });
+}
+
+function sortir(){
+    window.location.replace("http://google.com");
 }
 
 (function (global) {
