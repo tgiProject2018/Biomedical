@@ -1,6 +1,7 @@
 var oTable;
 var userTable;
 var page = 0;
+
 $(document).ready(function(){
     $(".headerBio a").on('click', function() {
         $('#listeClient').fadeIn();
@@ -36,43 +37,46 @@ $(document).ready(function(){
     });
     
     $(".infoTable").on('click', function() {
-        //Slideup l'autre contenu
-        $("#graphiqueClient").slideUp();
-        $("#rapportClient").slideUp();
-        $("#table_infoClient_wrapper").slideDown();
-        //changer a selected
-        $(".graphique").removeClass("selected");
-        $(".infoTable").addClass("selected");
-        $(".rapport").removeClass("selected");
+        showTab($(this));
     });
     $(".graphique").on('click', function() {
-        //Slideup l'autre contenu
-        $("#table_infoClient_wrapper").slideUp();
-        $("#rapportClient").slideUp();
-        $("#graphiqueClient").slideDown();
-        //changer a selected
-        $(".graphique").addClass("selected");
-        $(".infoTable").removeClass("selected");
-        $(".rapport").removeClass("selected");
+        showTab($(this));
     });
     $(".rapport").on('click', function() {
-        //Slideup l'autre contenu
-        $("#table_infoClient_wrapper").slideUp();
-        $("#graphiqueClient").slideUp();
-        $("#rapportClient").slideDown();
-        
-        //changer a selected
-        $(".graphique").removeClass("selected");
-        $(".infoTable").removeClass("selected");
-        $(".rapport").addClass("selected");
-        
-
+        showTab($(this));
     });
+
     window.onresize = function(){
         if(page==1) oTable.draw();
         else if (page == 2) userTable.draw();
     }
 });
+
+function showTab(elem) {
+    $(".graphique").removeClass("selected");
+    $(".infoTable").removeClass("selected");
+    $(".rapport").removeClass("selected");
+
+    elem.addClass("selected");
+
+    if(elem.attr("class").includes("rapport")) {
+        $("#table_infoClient_wrapper").slideUp();
+        $("#graphiqueClient").slideUp();
+        $("#rapportClient").slideDown();
+    }
+    else if (elem.attr("class").includes("graphique")) {
+        $("#table_infoClient_wrapper").slideUp();
+        $("#rapportClient").slideUp();
+        $("#graphiqueClient").slideDown();
+    }
+    else if (elem.attr("class").includes("infoTable")) {
+        
+        $("#graphiqueClient").slideUp();
+        $("#rapportClient").slideUp();
+        $("#table_infoClient_wrapper").slideDown();
+        userTable.draw();
+    }
+}
 
 function showInsertModal(){
     $('#mask').fadeIn();
@@ -147,99 +151,68 @@ function login () {
         });
         
         page = 2;
-        
-    } );
+
+        $('#graphiqueClient').html("<div id=\"kagiChart\"></div>");
+        Graph();
+    });
 }
 
-function Graph() {
+(function (global) {
 
-    var options = {
-        exportEnabled: true,
-        animationEnabled: true,
-        title:{
-            text: "Units Sold VS Profit"
-        },
-        subtitles: [{
-            text: "Click Legend to Hide or Unhide Data Series"
-        }],
-        axisX: {
-            title: "States"
-        },
-        axisY: {
-            title: "Units Sold",
-            titleFontColor: "#4F81BC",
-            lineColor: "#4F81BC",
-            labelFontColor: "#4F81BC",
-            tickColor: "#4F81BC",
-            includeZero: false
-        },
-        axisY2: {
-            title: "Profit in USD",
-            titleFontColor: "#C0504E",
-            lineColor: "#C0504E",
-            labelFontColor: "#C0504E",
-            tickColor: "#C0504E",
-            includeZero: false
-        },
-        toolTip: {
-            shared: true
-        },
-        legend: {
-            cursor: "pointer",
-            itemclick: toggleDataSeries
-        },
-        data: [{
-            type: "spline",
-            name: "Units Sold",
-            showInLegend: true,
-            xValueFormatString: "MMM YYYY",
-            yValueFormatString: "#,##0 Units",
-            dataPoints: [
-                { x: new Date(2016, 0, 1),  y: 120 },
-                { x: new Date(2016, 1, 1), y: 135 },
-                { x: new Date(2016, 2, 1), y: 144 },
-                { x: new Date(2016, 3, 1),  y: 103 },
-                { x: new Date(2016, 4, 1),  y: 93 },
-                { x: new Date(2016, 5, 1),  y: 129 },
-                { x: new Date(2016, 6, 1), y: 143 },
-                { x: new Date(2016, 7, 1), y: 156 },
-                { x: new Date(2016, 8, 1),  y: 122 },
-                { x: new Date(2016, 9, 1),  y: 106 },
-                { x: new Date(2016, 10, 1),  y: 137 },
-                { x: new Date(2016, 11, 1), y: 142 }
-            ]
-        },
-        {
-            type: "spline",
-            name: "Profit",
-            axisYType: "secondary",
-            showInLegend: true,
-            xValueFormatString: "MMM YYYY",
-            yValueFormatString: "$#,##0.#",
-            dataPoints: [
-                { x: new Date(2016, 0, 1),  y: 19034.5 },
-                { x: new Date(2016, 1, 1), y: 20015 },
-                { x: new Date(2016, 2, 1), y: 27342 },
-                { x: new Date(2016, 3, 1),  y: 20088 },
-                { x: new Date(2016, 4, 1),  y: 20234 },
-                { x: new Date(2016, 5, 1),  y: 29034 },
-                { x: new Date(2016, 6, 1), y: 30487 },
-                { x: new Date(2016, 7, 1), y: 32523 },
-                { x: new Date(2016, 8, 1),  y: 20234 },
-                { x: new Date(2016, 9, 1),  y: 27234 },
-                { x: new Date(2016, 10, 1),  y: 33548 },
-                { x: new Date(2016, 11, 1), y: 32534 }
-            ]
-        }]
+	if(typeof (global) === "undefined")
+	{
+		throw new Error("window is undefined");
+	}
+
+    var _hash = "!";
+    var noBackPlease = function () {
+        global.location.href += "#";
+
+		// making sure we have the fruit available for juice....
+		// 50 milliseconds for just once do not cost much (^__^)
+        global.setTimeout(function () {
+            global.location.href += "!";
+        }, 50);
     };
-    $("#graphiqueClient").CanvasJSChart(options);
-    
-    function toggleDataSeries(e) {
-        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-            e.dataSeries.visible = false;
-        } else {
-            e.dataSeries.visible = true;
+	
+	// Earlier we had setInerval here....
+    global.onhashchange = function () {
+        if (global.location.hash !== _hash) {
+            global.location.hash = _hash;
         }
-        e.chart.render();
-    }
+    };
+
+    global.onload = function () {
+        
+		noBackPlease();
+
+		// disables backspace on page except on input fields and textarea..
+		document.body.onkeydown = function (e) {
+            var elm = e.target.nodeName.toLowerCase();
+            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                e.preventDefault();
+            }
+            // stopping event bubbling up the DOM tree..
+            e.stopPropagation();
+        };
+		
+    };
+
+})(window);
+
+function Graph() {
+    var freqData=[
+        {State:'AL',freq:{low:4786, mid:1319, high:249}}
+        ,{State:'AZ',freq:{low:1101, mid:412, high:674}}
+        ,{State:'CT',freq:{low:932, mid:2149, high:418}}
+        ,{State:'DE',freq:{low:832, mid:1152, high:1862}}
+        ,{State:'FL',freq:{low:4481, mid:3304, high:948}}
+        ,{State:'GA',freq:{low:1619, mid:167, high:1063}}
+        ,{State:'IA',freq:{low:1819, mid:247, high:1203}}
+        ,{State:'IL',freq:{low:4498, mid:3852, high:942}}
+        ,{State:'IN',freq:{low:797, mid:1849, high:1534}}
+        ,{State:'KS',freq:{low:162, mid:379, high:471}}
+        ];
+        
+        dashboard('#kagiChart',freqData, 400, 500);
 }
