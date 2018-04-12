@@ -16,6 +16,13 @@ def on_disconnect():
 def on_reconnect():
 	print('reconnect')
 	
+def insererPatient(*args)
+	query = ("insert into tblPatient(prenom,nom,dateNaissance,adresse)values (prenom = %s, nom = %s,dateNaissance = %s adresse = %s)");
+	cursor.execute(query, (args[0],args[1],args[2],args[3]));
+	cursor.close();
+	cnx.close();
+	
+	
 def afficherInfo(*args):
 	idPatient = args[0]
 	query = ("Select date, systolique, diasystolique, poul from tblPriseTest"
@@ -27,14 +34,11 @@ def afficherInfo(*args):
 		socket.emit('afficherInfoPatient', {date: date, systolique: systolique, diasystolique: diasystolique, poul:poul});
 	
 
-	cursor.close()
+	cursor.close();
 	cnx.close();
 		
 def afficherToutLesPatient(*args):
-	#idPatient = args[0]
-	query = ("Select id , prenom, nom, dateDeNaissance, adresse, date from tblPatient"
-			""
-	)
+	query = ("Select id , prenom, nom, dateDeNaissance, adresse, date from tblPatient""")
 	cursor.execute(query, idPatient)
 	#Select x.id, prenom, nom, y.date from tbpatient x
 	#inner join tbpriseteste y
@@ -45,11 +49,31 @@ def afficherToutLesPatient(*args):
 		socket.emit('afficherToutLesPatient', {prenom: prenom, nom: nom, naissance: dateDeNaissance, adresse:adresse});
 	
 
-	cursor.close()
+	cursor.close();
+	cnx.close();
+
+def modifierPatient(*args):
+	idPatient = args[0];
+	query = ("update tblPatient set prenom = %s, nom = %s, adresse = %s where id = %s");
+	cursor.execute(query, (args[1],args[2],args[3],idPatient));
+	cursor.close();
+	cnx.close();
+	
+def rechercheChamp(*args):
+	query = ("select * from tblPatient where prenom like %s or nom like %s");
+	cursor.execute(query,(args[0]+"%",args[0]+"%"));
+	results = cursor.fetchall();
+	socketIO.emit('rechercheChamp', resultats);
+	cursor.close();
 	cnx.close();
 	
 ## 'main'
+socketIO = SocketIO("localhost",8080)
+socketIO.on('insererPatient', insererPatient)
+socketIO.on('modifierPatient', modifierPatient)
 socketIO.on('afficherInfo', afficherInfo)
+socketIO.on('afficherPatient', afficherToutLesPatient)
+socketIO.on('rechercheChamp', rechercheChamp)
 ## Loop principal
 socketIO.wait()
 ## On fait le menage
